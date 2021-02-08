@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/normalize.css" class="css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/VPenkov/okayNav/master/app/js/jquery.okayNav.js"></script>
+    <script src="https://kit.fontawesome.com/4f1a2b6a87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header nohome">
+        <div class="wrapper">
+            <nav>
+            <figure>
+                <img src="img/logo.png" alt="logotipo antonio">
+            </figure>
+            <div class="nav okayNav" id="nav-main">
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bio.html">Un poco sobre mí</a></li>
+                <li><a href="portfolio.html">Mis trabajos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </div>
+            </nav>
+            <div class="headerContainer">
+                <section>
+                   <div class="sobreMiHeader">
+                       <p><a href="index.html">Inicio /</a><span> Contacto</span></p>
+                   </div> 
+                </section>
+            </div>
+            
+        </div>
+    </header>
+    <main>
+        <section class="datosContacto">
+            <h2 class="h2">Contacta conmigo</h2>
+            <div class="wrapper contenidoContacto">
+                    <article>
+                        <p><i class="fas"></i></p>
+                        <p><span>Teléfono:</span> 686 164 343</p>   
+                    </article>
+                    <article>
+                        <p><i class="fas"></i></p>
+                        <p><span>Email:</span> a@asesotec.com</p>
+                    </article>
+                    <article>
+                        <p><i class="fas"></i></p>
+                        <p>Calle de los Dolores, 32</p>
+                    </article>
+                </div>
+        </section>
+        <section class="formulario">
+            <h2 class="h2">Déjame un mensaje</h2>
+            <div class="wrapper miFormulario">
+                <form action="index.html" method="POST">
+                    <div class="datos-1">
+                    <p>
+                    <label for="geriNombre">Nombre:</label>
+                    <input type="text" name="geriNombre" id="geriNombre" placeholder="Tu nombre">
+                    </p>
+                    <p>
+                        <label for="geriApellidos">Apellidos:</label>
+                        <input type="text" name="geriApellidos" id="geriApellidos" placeholder="Tus apellidos">
+                    </p>
+                    <p>
+                        <label for="geriMail">Correo electrónico:</label>
+                        <input type="email" name="geriMail " id="geriMail" placeholder="Correo electrónico">
+                    </p>
+                    <p>
+                        <label for="geriPhone">Teléfono:</label>
+                    <input type="tel" name="geriPhone" id="geriPhone" placeholder="Teléfono">
+                    </p>
+                    <p>
+                        <label for="geriCuentanos">Cuéntanos sobre tí:</label><br>
+                        <textarea name="geriCuentanos" id="geriCuentanos"></textarea>
+                    </p>
+                
+                </div>
+                    <input type="submit" value="Enviar mensaje">
+                </form>
+                    
+            </div>
+        </section>
+            
+       
+
+    </main>
+    <footer>
+        <div class="wrapper">
+            <section>
+                <div class="socialIcons">
+                    <figure><img src="img/twitter.png" alt="twitter"></figure>
+                    <figure><img src="img/facebook.png" alt="facebook"></figure>
+                    <figure><img src="img/instagram.png" alt="instagram"></figure>
+                </div>
+            </section>
+            <section>
+                <p><small>Copyright © 2021 Antonio Escudero. Todos los derechos reservados.</small></p>
+            </section>
+        </div>
+    </footer>
+    <script>
+        var navigation = $('#nav-main').okayNav();
+    </script>
+</body>
+</html>

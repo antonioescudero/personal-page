@@ -135,6 +135,8 @@ body.okayNav-loaded {
     /* Links general styling */
     position: relative;
     z-index: 1;
+    margin: 0;
+    
   }
   .okayNav__nav--visible {
     overflow: hidden;
@@ -165,7 +167,8 @@ body.okayNav-loaded {
     background: #fff;
     width: 240px;
     display: block;
-    padding: 15px;
+    padding: 25px 0;
+    color: #222;
   }
   .okayNav__nav--invisible.nav-left {
     left: 0;
@@ -186,6 +189,8 @@ body.okayNav-loaded {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  ul.okayNav__nav--invisible.nav-right.transition-enabled.nav-open {
+    list-style: none;}
   /* Kebab icon */
   .okayNav__menu-toggle {
     position: relative;
@@ -197,8 +202,12 @@ body.okayNav-loaded {
     height: 20px;
     float: left;
     z-index: 1;
-    top: 15px;
+    top: 0px;
   }
+  .okayNav__menu-toggle:hover:before {
+    opacity: 0 !important;
+}
+
   .okayNav__menu-toggle.okay-invisible {
     position: absolute;
     opacity: 0;
@@ -284,7 +293,7 @@ body.okayNav-loaded {
   /*******SOBRE MI*****/
   
   .wrapper.sobreMi {
-    margin-top: 40px;
+    margin: 40px 0;
 }
   .sobreMi img {
       max-width:800px;
@@ -314,6 +323,7 @@ body.okayNav-loaded {
     padding:30px 0;
 }
 .misServicios article{
+    border-top:4px solid red;
     background:#222;
     padding:30px;
     color:#fff;
@@ -367,6 +377,168 @@ footer img {
     margin:0 10px;
 }
 
+/**************NOHOME***********/
+.header.nohome {
+    min-height: initial;
+}
+.nohome .sobreMiHeader{
+    padding-bottom:40px;
+}
+.sobreMiHeader {
+    color:red;
+    font-size:26px;
+    text-transform:uppercase;
+}
+.sobreMiHeader a {
+    text-decoration:none;
+    color:#fff;
+}
+
+
+/********SOBRE MI*********/
+.misConocimientos{
+    background:#ececec;
+    padding:40px;
+}
+.datosPersonales{
+    margin-bottom:50px;
+}
+.datosPersonales span{
+    text-transform: uppercase;
+    margin-left:10px;
+    margin-right:10px;
+    font-size:18px;
+    font-weight: bold;;
+}
+.progresoBarra{
+    max-width:400px;
+    width:100%;
+    height:40px;
+    border-radius:30px;
+    background:#222;
+    position:relative;
+}
+.progresoBarra span {
+    position:absolute;
+    height: 30px;
+    border-radius:30px;
+    background:red;
+    top: 5px;
+    left:5px;
+}
+.misConocimientos .wrapper{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.misConocimientos h2{
+    font-size:30px;
+}
+
+
+
+/********PORTFOLIO*********/
+.misProyectos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.misProyectos figure{
+    margin-bottom:40px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+.misProyectos figure:hover img{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.misProyectos figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.misProyectos figure:hover figcaption {
+    opacity: 1;
+}
+
+.misProyectos figcaption{
+    text-transform: uppercase;
+    position: absolute;
+    color: #fff;
+    top: 40%;
+    font-weight: bold;
+    left: 76px;
+    opacity: 0;
+}
+.misProyectos figure:before{
+    content:'';
+    width:100%;
+    background:#2222229e;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    
+}
+.miEnlace .fas{
+    font-size: 30px;
+}
+
+
+.misProyectos img{
+    width:100%;
+    position:relative;
+    z-index:-1;
+}
+
+/********CONTACTO*********/
+.contenidoContacto .fas{
+    font-size:46px;
+}
+.contenidoContacto{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+}
+.datosContacto{
+    margin-bottom:80px;
+}
+
+.formulario{
+    background:#ececec;
+    padding:40px 0 80px 0;
+     
+}
+.formulario form{
+    max-width:500px;
+    width:100%;
+    margin:20px auto;
+    border:1px solid #ccc;
+    padding:30px;
+}
+.formulario form input,.formulario form textarea{
+    width:100%;
+    padding:10px;
+    background:transparent;
+    border:1px solid #ccc;
+}
+.formulario input[type="submit"]{
+    background:red;
+    color:#fff;
+    text-transform:uppercase;
+    font-weight: bold;
+}
+
+
+/**********************RESPONSIVE*****************************/
+/************************************************************/
+/*---------------------------------------------------------*/
+
 @media screen and (min-width: 768px){
 
     .headerContainer .miNombre{
@@ -413,6 +585,20 @@ footer img {
 
     .miLlamada h3{
         font-size:26px;
+    }
+
+
+    .misConocimientos .wrapper{
+        flex-direction:row;
+    }
+
+    .misProyectos img{
+        max-width:250px;
+    }
+
+    .contenidoContacto {
+        flex-direction:row;
+        justify-content: space-between;
     }
 
 }
