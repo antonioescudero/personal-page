@@ -592,6 +592,9 @@ footer img {
         flex-direction:row;
     }
 
+    .progresoBarra{
+        width:400px;}
+
     .misProyectos img{
         max-width:250px;
     }
